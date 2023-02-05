@@ -1,0 +1,105 @@
+/* Credits Théo Lesage GNU Public */
+
+@import url(vars.css);
+
+*, ::after, ::before{
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Code Retina", Consolas, monospace;
+  color: var(--clr-text);
+}
+
+a{
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover{
+  text-decoration-color: var(--clr-accent);
+}
+
+button{
+  background-color: transparent;
+  border: 1px solid var(--clr-text);
+  padding: 16px 24px;
+  cursor: pointer;
+  position: relative;
+  transition-delay: .25s;
+  overflow: hidden;
+  transition: transform .2s ease-in-out ,color .2s ease-in-out;
+}
+
+button::after{
+  content:"";
+  display: block;
+  background: rgb(250,251,254);
+  background: linear-gradient(90deg, rgba(250,251,254,1) 12.5%, rgba(50,153,222,1) 12.5%, rgba(50,153,222,1) 25%, rgba(222,102,222,1) 25%, rgba(222,102,222,1) 37.5%, rgba(222,119,50,1) 37.5%, rgba(222,119,50,1) 50%, rgba(250,251,254,1) 50%);
+  position: absolute;
+  inset: 0;
+  min-width: 200%;
+  transform: translateX(200%);
+  z-index: -1;
+  animation: enterButton .5s ease-in forwards;
+}
+
+button:hover{
+  color: var(--clr-background);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px var(--clr-shadow);
+}
+
+button:hover::after{
+  animation: buttonEffect .7s cubic-bezier(.55,.56,.63,.31) forwards;
+}
+
+@keyframes enterButton {
+  0%{
+    transform: translateX(-50%);
+    color: var(--clr-background);
+  }
+  100%{
+    transform: translateX(-100%);
+    color: var(--clr-text);
+  }
+}
+
+@keyframes buttonEffect {
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
+}
+
+body{
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--clr-background);
+  overflow-x: hidden;
+}
+
+ul, ol{
+  list-style: none;
+}
+
+::selection{
+  background-color: var(--clr-accent);
+}
+
+#app-wraper{
+  max-width: 1920px;
+  display: grid;
+  grid-template-rows: 90px minmax(100vh, auto) auto;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+  background-color: var(--clr-background);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--clr-text);
+}
