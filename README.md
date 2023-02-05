@@ -1,10 +1,10 @@
-# vuethree
+# dotcode
 
-This template should help get you started developing with Vue 3 in Vite.
+Projet réaliser dans le cadre scolaire. 
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Webstorm with Vue enabled.
 
 ## Customize configuration
 
@@ -17,6 +17,7 @@ npm install
 ```
 
 ### Compile and Hot-Reload for Development
+The process run on port 5173, the default vite port.
 
 ```sh
 npm run dev
