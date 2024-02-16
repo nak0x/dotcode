@@ -6,7 +6,7 @@
     "dev": "vite",
     "host": "vite --host 8080",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "vite preview"
   },
   "dependencies": {
     "cool-ascii-faces": "^1.3.4",
